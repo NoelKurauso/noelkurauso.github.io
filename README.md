@@ -1,9 +1,7 @@
- 
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>html,body{margin:0!important;padding:0!important;width:100%!important;max-width:100%!important}</style>
 <title>Parcerias que Transformam Vidas | Prosa com Julival</title>
 
 <meta name="description" content="Leve sua marca para uma das vozes mais queridas da região. Patrocine o Prosa com Julival e alcance milhares de pessoas toda semana — no rádio, YouTube, Instagram e TikTok.">
@@ -43,12 +41,6 @@
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -56,18 +48,6 @@
     background: var(--warm-white);
     color: var(--text-dark);
     overflow-x: hidden;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Remove qualquer wrapper que o Jekyll/GitHub Pages possa injetar */
-  body > div:not([id]):not([class]),
-  body > main, body > article, body > section:first-of-type {
-    max-width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
   }
 
   /* ── NAV ── */
@@ -199,6 +179,8 @@
 
   /* ── SECTION COMMONS ── */
   section { padding: 100px 80px; }
+  #hero, #convidados, #empresas { padding-left: 0 !important; padding-right: 0 !important; }
+  #hero { padding-top: 80px; padding-bottom: 0; }
   .section-label {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
