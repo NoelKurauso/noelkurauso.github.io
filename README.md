@@ -1,8 +1,27 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prosa com Julival 10 — Parcerias & Patrocínio</title>
+<title>Parcerias que Transformam Vidas | Prosa com Julival</title>
+
+<meta name="description" content="Leve sua marca para uma das vozes mais queridas da região. Patrocine o Prosa com Julival e alcance milhares de pessoas toda semana — no rádio, YouTube, Instagram e TikTok.">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Parcerias que Transformam Vidas | Prosa com Julival">
+<meta property="og:description" content="Uma conversa profunda sobre parcerias, propósito e impacto na vida real. Saiba como sua marca pode fazer parte disso.">
+<meta property="og:image" content="https://prosacomjulivaldez.xyz/og-image.jpg">
+<meta property="og:url" content="https://prosacomjulivaldez.xyz/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prosa com Julival">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Parcerias que Transformam Vidas | Prosa com Julival">
+<meta name="twitter:description" content="Conteúdo direto e profundo sobre propósito, colaboração e impacto. Seja um parceiro do programa.">
+<meta name="twitter:image" content="https://prosacomjulivaldez.xyz/og-image.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -413,26 +432,33 @@
   .vaga-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.2); flex-shrink: 0; }
   .vaga-badge.disponivel .dot { background: var(--gold); animation: pulse 2s infinite; }
 
-  /* ── MURAL DE CONVIDADOS — INFINITE LOOP ── */
+  /* ── MURAL DE CONVIDADOS — INFINITE LOOP DUAS LINHAS ── */
   #convidados { background: var(--cream); overflow: hidden; }
   .convidados-loop-wrap {
     margin-top: 56px; position: relative; overflow: hidden;
+    display: flex; flex-direction: column; gap: 12px;
     -webkit-mask: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
     mask: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
   }
   .convidados-loop-track {
     display: flex; gap: 12px; width: max-content;
-    animation: convidados-scroll 80s linear infinite;
-    cursor: grab;
   }
-  .convidados-loop-track:active { cursor: grabbing; }
-  .convidados-loop-track.paused { animation-play-state: paused; }
-  @keyframes convidados-scroll {
+  .convidados-loop-track.row-left {
+    animation: convidados-left 120s linear infinite;
+  }
+  .convidados-loop-track.row-right {
+    animation: convidados-right 130s linear infinite;
+  }
+  @keyframes convidados-left {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
   }
+  @keyframes convidados-right {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+  }
   .convidado-item {
-    flex: 0 0 200px; height: 260px; border-radius: 8px; overflow: hidden;
+    flex: 0 0 180px; height: 230px; border-radius: 8px; overflow: hidden;
     position: relative; background: var(--navy);
     box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   }
@@ -443,15 +469,6 @@
     transition: transform 0.5s;
   }
   .convidado-item:hover img { transform: scale(1.06); }
-  .convidados-nav {
-    display: flex; gap: 16px; margin-top: 28px; justify-content: center;
-  }
-  .convidados-btn {
-    background: var(--navy); color: var(--gold-light); border: 1px solid rgba(200,144,26,0.3);
-    width: 44px; height: 44px; border-radius: 50%; font-size: 1.1rem;
-    cursor: pointer; transition: background 0.2s, transform 0.2s; display: flex; align-items: center; justify-content: center;
-  }
-  .convidados-btn:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); transform: scale(1.1); }
 
   /* ── CALCULADORA ── */
   #calculadora { background: var(--navy); }
@@ -1162,8 +1179,8 @@
   <p class="section-desc">Empresários, líderes comunitários, profissionais e personalidades regionais que o Prosa com Julival 10 já recebeu no estúdio.</p>
 
   <div class="convidados-loop-wrap">
-    <div class="convidados-loop-track" id="convidadosTrack">
-      <!-- original set -->
+    <!-- Linha 1: move para a esquerda -->
+    <div class="convidados-loop-track row-left">
       <div class="convidado-item"><img src="https://i.imgur.com/f3bA1qs.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/Uye3ziu.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/lhmAhDY.jpg" alt="Convidado"></div>
@@ -1187,6 +1204,34 @@
       <div class="convidado-item"><img src="https://i.imgur.com/zqeleWa.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/r7qhxwS.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/V1vVywW.jpg" alt="Convidado"></div>
+      <!-- duplicate for seamless loop -->
+      <div class="convidado-item"><img src="https://i.imgur.com/f3bA1qs.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/Uye3ziu.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/lhmAhDY.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/MWL0cc3.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/ewSJNOy.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/qpzghKl.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/cGQjWRX.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/aarySCr.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/pztZFvE.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/HrFTvQ4.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/EnEMoxz.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/UQSZlyo.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/lQURNhw.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/FAFJ9gQ.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/vYtkAiV.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/RlyvOgY.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/NML82T3.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/6RnfZOo.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/ZdeoDzW.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/Ikpl3op.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/zqeleWa.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/r7qhxwS.jpg" alt="Convidado"></div>
+      <div class="convidado-item"><img src="https://i.imgur.com/V1vVywW.jpg" alt="Convidado"></div>
+    </div>
+
+    <!-- Linha 2: move para a direita (sentido inverso) -->
+    <div class="convidados-loop-track row-right">
       <div class="convidado-item"><img src="https://i.imgur.com/NFjMnj6.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/rV16XE1.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/sP9xec8.jpg" alt="Convidado"></div>
@@ -1211,42 +1256,7 @@
       <div class="convidado-item"><img src="https://i.imgur.com/cX32ZFO.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/QbyFXbM.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/EC4kw1j.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/FTv80T0.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/xU9bowR.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/l8wyuk1.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/bTNYtj6.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/JUTRTTC.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/qNUXAW7.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/cYSAscJ.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/mBBzGWQ.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/kGaORZ4.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/uTHId4R.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/Ll63Gw5.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/rb9BuET.jpg" alt="Convidado"></div>
-      <!-- duplicate set for seamless loop -->
-      <div class="convidado-item"><img src="https://i.imgur.com/f3bA1qs.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/Uye3ziu.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/lhmAhDY.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/MWL0cc3.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/ewSJNOy.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/qpzghKl.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/cGQjWRX.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/aarySCr.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/pztZFvE.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/HrFTvQ4.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/EnEMoxz.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/UQSZlyo.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/lQURNhw.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/FAFJ9gQ.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/vYtkAiV.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/RlyvOgY.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/NML82T3.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/6RnfZOo.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/ZdeoDzW.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/Ikpl3op.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/zqeleWa.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/r7qhxwS.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/V1vVywW.jpg" alt="Convidado"></div>
+      <!-- duplicate for seamless loop -->
       <div class="convidado-item"><img src="https://i.imgur.com/NFjMnj6.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/rV16XE1.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/sP9xec8.jpg" alt="Convidado"></div>
@@ -1271,27 +1281,11 @@
       <div class="convidado-item"><img src="https://i.imgur.com/cX32ZFO.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/QbyFXbM.jpg" alt="Convidado"></div>
       <div class="convidado-item"><img src="https://i.imgur.com/EC4kw1j.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/FTv80T0.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/xU9bowR.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/l8wyuk1.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/bTNYtj6.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/JUTRTTC.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/qNUXAW7.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/cYSAscJ.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/mBBzGWQ.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/kGaORZ4.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/uTHId4R.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/Ll63Gw5.jpg" alt="Convidado"></div>
-      <div class="convidado-item"><img src="https://i.imgur.com/rb9BuET.jpg" alt="Convidado"></div>
     </div>
   </div>
-
-  <div class="convidados-nav">
-    <button class="convidados-btn" id="convidadosPrev" title="Mais devagar">← Devagar</button>
-    <button class="convidados-btn" id="convidadosSlower" title="Pausar/Retomar">⏸</button>
-    <button class="convidados-btn" id="convidadosNext" title="Mais rápido">Rápido →</button>
-  </div>
 </section>
+
+
 
 <!-- PLATAFORMAS -->
 <section id="plataformas">
@@ -1581,45 +1575,6 @@ function enviarFormulario(e) {
   );
   window.open(`https://wa.me/5573991177737?text=${texto}`, '_blank');
 }
-
-// Convidados — infinite CSS loop with hover-pause and play/pause button
-(function() {
-  const track = document.getElementById('convidadosTrack');
-  if (!track) return;
-
-  let playing = true;
-
-  function setPaused(pause) {
-    playing = !pause;
-    track.style.animationPlayState = pause ? 'paused' : 'running';
-    const btn = document.getElementById('convidadosSlower');
-    if (btn) btn.textContent = pause ? '▶' : '⏸';
-  }
-
-  // Hover pause
-  track.addEventListener('mouseenter', () => setPaused(true));
-  track.addEventListener('mouseleave', () => { if (playing) setPaused(false); });
-
-  // Touch pause/resume
-  track.addEventListener('touchstart', () => setPaused(true), {passive:true});
-  track.addEventListener('touchend', () => { if (playing) setPaused(false); }, {passive:true});
-
-  // Play/pause button
-  document.getElementById('convidadosSlower')?.addEventListener('click', () => {
-    playing = !playing;
-    setPaused(!playing);
-  });
-
-  // ← slower / → faster nudge
-  document.getElementById('convidadosPrev')?.addEventListener('click', () => {
-    const cur = parseFloat(getComputedStyle(track).animationDuration) || 80;
-    track.style.animationDuration = Math.min(cur * 1.4, 240) + 's';
-  });
-  document.getElementById('convidadosNext')?.addEventListener('click', () => {
-    const cur = parseFloat(getComputedStyle(track).animationDuration) || 80;
-    track.style.animationDuration = Math.max(cur * 0.7, 20) + 's';
-  });
-})();
 
 // Scroll suave para nav
 document.querySelectorAll('a[href^="#"]').forEach(a => {
