@@ -1,7 +1,9 @@
+ 
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>html,body{margin:0!important;padding:0!important;width:100%!important;max-width:100%!important}</style>
 <title>Parcerias que Transformam Vidas | Prosa com Julival</title>
 
 <meta name="description" content="Leve sua marca para uma das vozes mais queridas da região. Patrocine o Prosa com Julival e alcance milhares de pessoas toda semana — no rádio, YouTube, Instagram e TikTok.">
@@ -10,7 +12,7 @@
 <!-- Open Graph -->
 <meta property="og:title" content="Parcerias que Transformam Vidas | Prosa com Julival">
 <meta property="og:description" content="Uma conversa profunda sobre parcerias, propósito e impacto na vida real. Saiba como sua marca pode fazer parte disso.">
-<meta property="og:image" content="https://prosacomjulivaldez.xyz/og-image.jpg">
+<meta property="og:image" content="https://i.imgur.com/Kt31dMS.png">
 <meta property="og:url" content="https://prosacomjulivaldez.xyz/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Prosa com Julival">
@@ -19,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Parcerias que Transformam Vidas | Prosa com Julival">
 <meta name="twitter:description" content="Conteúdo direto e profundo sobre propósito, colaboração e impacto. Seja um parceiro do programa.">
-<meta name="twitter:image" content="https://prosacomjulivaldez.xyz/og-image.jpg">
+<meta name="twitter:image" content="https://i.imgur.com/Kt31dMS.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
@@ -41,6 +43,12 @@
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   html { scroll-behavior: smooth; }
 
   body {
@@ -48,6 +56,18 @@
     background: var(--warm-white);
     color: var(--text-dark);
     overflow-x: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Remove qualquer wrapper que o Jekyll/GitHub Pages possa injetar */
+  body > div:not([id]):not([class]),
+  body > main, body > article, body > section:first-of-type {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   /* ── NAV ── */
